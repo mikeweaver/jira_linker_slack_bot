@@ -1,0 +1,9 @@
+venv
+venv/*
+*.zip
+.idea/
+*.pyc
+.cache
+.eggs
+UNKNOWN.*
+*.egg-info

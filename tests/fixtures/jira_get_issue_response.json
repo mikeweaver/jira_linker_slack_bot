@@ -1,0 +1,578 @@
+{
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+  "id": "44216",
+  "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/44216",
+  "key": "STORY-4588",
+  "fields": {
+    "customfield_13100": null,
+    "fixVersions": [
+
+    ],
+    "resolution": null,
+    "customfield_10500": null,
+    "customfield_10900": null,
+    "lastViewed": "2016-12-22T09:50:31.968-0800",
+    "customfield_12000": null,
+    "priority": {
+      "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/priority\/3",
+      "iconUrl": "https:\/\/ringrevenue.atlassian.net\/images\/icons\/priorities\/major.svg",
+      "name": "Major",
+      "id": "3"
+    },
+    "customfield_10100": null,
+    "customfield_12400": null,
+    "labels": [
+      "earlybirds",
+      "eb-nextgrooming"
+    ],
+    "customfield_13207": null,
+    "customfield_13206": null,
+    "customfield_11702": null,
+    "customfield_13208": null,
+    "timeestimate": null,
+    "aggregatetimeoriginalestimate": null,
+    "versions": [
+
+    ],
+    "issuelinks": [
+      {
+        "id": "32914",
+        "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issueLink\/32914",
+        "type": {
+          "id": "10003",
+          "name": "Relates",
+          "inward": "relates to",
+          "outward": "relates to",
+          "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issueLinkType\/10003"
+        },
+        "inwardIssue": {
+          "id": "44014",
+          "key": "WEB-2481",
+          "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/44014",
+          "fields": {
+            "summary": "In a bundle, verifying location before a round robin prevents routing repeat callers to previous destination",
+            "status": {
+              "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/status\/11115",
+              "description": "",
+              "iconUrl": "https:\/\/ringrevenue.atlassian.net\/images\/icons\/statuses\/generic.png",
+              "name": "Code Review",
+              "id": "11115",
+              "statusCategory": {
+                "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/statuscategory\/4",
+                "id": 4,
+                "key": "indeterminate",
+                "colorName": "yellow",
+                "name": "In Progress"
+              }
+            },
+            "priority": {
+              "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/priority\/3",
+              "iconUrl": "https:\/\/ringrevenue.atlassian.net\/images\/icons\/priorities\/major.svg",
+              "name": "Major",
+              "id": "3"
+            },
+            "issuetype": {
+              "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issuetype\/1",
+              "id": "1",
+              "description": "A problem which impairs or prevents the functions of the product.",
+              "iconUrl": "https:\/\/ringrevenue.atlassian.net\/secure\/viewavatar?size=xsmall&avatarId=12703&avatarType=issuetype",
+              "name": "Bug",
+              "subtask": false,
+              "avatarId": 12703
+            }
+          }
+        }
+      }
+    ],
+    "assignee": null,
+    "status": {
+      "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/status\/11315",
+      "description": "",
+      "iconUrl": "https:\/\/ringrevenue.atlassian.net\/images\/icons\/statuses\/generic.png",
+      "name": "Grooming",
+      "id": "11315",
+      "statusCategory": {
+        "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/statuscategory\/2",
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+      }
+    },
+    "components": [
+
+    ],
+    "customfield_13201": null,
+    "customfield_13203": null,
+    "customfield_11300": null,
+    "customfield_13202": null,
+    "customfield_13205": null,
+    "customfield_13204": null,
+    "customfield_10600": null,
+    "customfield_10601": null,
+    "customfield_12900": null,
+    "customfield_10602": null,
+    "customfield_10603": null,
+    "aggregatetimeestimate": null,
+    "creator": {
+      "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=nziv",
+      "name": "nziv",
+      "key": "nziv",
+      "emailAddress": "nziv@invoca.com",
+      "avatarUrls": {
+        "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=nziv&avatarId=11801",
+        "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=nziv&avatarId=11801",
+        "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=nziv&avatarId=11801",
+        "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=nziv&avatarId=11801"
+      },
+      "displayName": "Nathan Ziv",
+      "active": true,
+      "timeZone": "America\/Los_Angeles"
+    },
+    "subtasks": [
+
+    ],
+    "reporter": {
+      "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=nziv",
+      "name": "nziv",
+      "key": "nziv",
+      "emailAddress": "nziv@invoca.com",
+      "avatarUrls": {
+        "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=nziv&avatarId=11801",
+        "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=nziv&avatarId=11801",
+        "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=nziv&avatarId=11801",
+        "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=nziv&avatarId=11801"
+      },
+      "displayName": "Nathan Ziv",
+      "active": true,
+      "timeZone": "America\/Los_Angeles"
+    },
+    "customfield_12100": null,
+    "aggregateprogress": {
+      "progress": 0,
+      "total": 0
+    },
+    "customfield_12103": null,
+    "customfield_10200": null,
+    "customfield_12102": null,
+    "customfield_10201": "Not started",
+    "customfield_12105": null,
+    "customfield_12501": null,
+    "customfield_12500": null,
+    "customfield_11402": "--",
+    "customfield_11800": null,
+    "progress": {
+      "progress": 0,
+      "total": 0
+    },
+    "votes": {
+      "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/STORY-4588\/votes",
+      "votes": 0,
+      "hasVoted": false
+    },
+    "worklog": {
+      "startAt": 0,
+      "maxResults": 20,
+      "total": 0,
+      "worklogs": [
+
+      ]
+    },
+    "issuetype": {
+      "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issuetype\/7",
+      "id": "7",
+      "description": "A user story. Created by JIRA Software - do not edit or delete.",
+      "iconUrl": "https:\/\/ringrevenue.atlassian.net\/secure\/viewavatar?size=xsmall&avatarId=12711&avatarType=issuetype",
+      "name": "Story",
+      "subtask": false,
+      "avatarId": 12711
+    },
+    "timespent": null,
+    "project": {
+      "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/project\/10200",
+      "id": "10200",
+      "key": "STORY",
+      "name": "Product Backlog",
+      "avatarUrls": {
+        "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/projectavatar?pid=10200&avatarId=10011",
+        "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/projectavatar?size=small&pid=10200&avatarId=10011",
+        "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/projectavatar?size=xsmall&pid=10200&avatarId=10011",
+        "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/projectavatar?size=medium&pid=10200&avatarId=10011"
+      }
+    },
+    "customfield_13300": null,
+    "aggregatetimespent": null,
+    "customfield_11401": null,
+    "customfield_10700": null,
+    "resolutiondate": null,
+    "workratio": -1,
+    "watches": {
+      "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/STORY-4588\/watchers",
+      "watchCount": 5,
+      "isWatching": true
+    },
+    "created": "2016-09-28T17:04:22.253-0700",
+    "customfield_12200": null,
+    "customfield_12202": null,
+    "customfield_10300": null,
+    "customfield_12600": null,
+    "customfield_10016": null,
+    "customfield_10017": null,
+    "customfield_10018": null,
+    "customfield_11900": null,
+    "customfield_10019": null,
+    "updated": "2016-12-22T12:04:04.175-0800",
+    "timeoriginalestimate": null,
+    "description": "h2. Story\r\n\r\nAs a user of Invoca's repeat caller + verify location when performing bundle campaign selection functionality -> if a repeat caller has already verified\/confirmed their location when previously calling into a bundle and the send to original destination option is checked -> do not have the caller verify location again and send the caller immediately back to the original destination campaign.\r\n\r\nh2. How to Demo\r\n\r\n1) Show that repeat callers to a bundle with verify location where the option to send the caller to the original destination campaign is CHECKED do not have their verification re-checked and are routed directly to the original destination campaign. \r\n\r\n2) Show that repeat callers to a bundle with verify location where the option to send the caller to the original destination campaign is UNCHECKED are re-prompted to verify location and destination campaign chosen based on the new location entry. \r\n\r\nh3. Additional Note\r\n\r\n{color:#333333}(*The following use case was also investigated:*\r\n\r\nIf a repeat caller has already verified\/confirmed their location when previously calling into a bundle and the send to original destination option is checked -> confirm the caller's location again and if same as previously entered, send the caller back to the original destination option and, if not, send the caller to the best corresponding destination campaign based on bundle configuration rules. \r\n\r\n{color:#205081}*And determined NOT be desired behavior:*\r\n\r\nBoth HyperTarget and RingPartner (most affected customers by this story) agree that if they have a bundle with 'verify location' and 'send repeat caller to original destination' on, they would like to just send the repeat caller to the original destination without having any further verification\r\nIn case they don't want this behavior, they would not select the 'send repeat caller to original destination' checkbox. This means we don't need to introduce the second verification location that was proposed.){color}{color}\r\n\r\nh3. Grooming Notes:\r\nScott Herriman would like to review the grooming notes for this story before it is planned.\r\n\r\nh3. Dev Notes\r\nNeed to add logic here to skip verification if repeat caller\r\n\r\n{code}\r\ndef run(&blk)\r\n  @callback_block = blk\r\n  @retries_left = MAX_ZIP_CODE_TRIES\r\n  if current_cdr.attributes[\"verified_zip\"] || (cdr.any_telco_location_verified? && allow_caller_to_accept_telco_location?)\r\n    current_cdr.mark_telco_location_verified if cdr.any_telco_location_verified?\r\n    zip_code_verified(play_prompt: false)\r\n  else\r\n    current_cdr.unmark_telco_location_verified\r\n    if (prompt_file = prompt_local_file_name)\r\n      playback_prompt(prompt_file, node.prompt) { |_| start_verification }\r\n    else\r\n      start_verification\r\n    end\r\n  end\r\nend\r\n{code}\r\n\r\n[https:\/\/github.com\/Invoca\/web\/blob\/0217732db569975b956852fc3a177ef1c212850a\/lib\/ringswitch\/node_executor\/location_verification.rb#L9]\r\n",
+    "customfield_13000": "{}",
+    "customfield_11100": "0|zxlz3h:",
+    "customfield_10013": null,
+    "customfield_10014": null,
+    "customfield_10015": null,
+    "timetracking": {
+
+    },
+    "customfield_10005": null,
+    "customfield_12700": null,
+    "customfield_10007": [
+      "com.atlassian.greenhopper.service.sprint.Sprint@1def925[id=166,rapidViewId=1,state=FUTURE,name=EB Scrumban Backlog,goal=<null>,startDate=<null>,endDate=<null>,completeDate=<null>,sequence=185]"
+    ],
+    "customfield_10008": null,
+    "customfield_10800": [
+      {
+        "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=vcarrillo",
+        "name": "vcarrillo",
+        "key": "vcarrillo",
+        "emailAddress": "vcarrillo@invoca.com",
+        "avatarUrls": {
+          "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=vcarrillo&avatarId=17201",
+          "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=vcarrillo&avatarId=17201",
+          "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=vcarrillo&avatarId=17201",
+          "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=vcarrillo&avatarId=17201"
+        },
+        "displayName": "Vicente Carrillo",
+        "active": true,
+        "timeZone": "America\/Los_Angeles"
+      }
+    ],
+    "customfield_10009": null,
+    "attachment": [
+
+    ],
+    "summary": "Repeat callers to bundles w\/ send to original destination option and verify location always send to original destination campaign",
+    "customfield_10000": null,
+    "customfield_10001": "2016-09-29T14:59:09.923-0700",
+    "customfield_12301": null,
+    "customfield_10002": null,
+    "customfield_12300": null,
+    "customfield_10003": null,
+    "customfield_10004": null,
+    "customfield_10400": null,
+    "customfield_11600": null,
+    "environment": null,
+    "duedate": null,
+    "comment": {
+      "comments": [
+        {
+          "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/44216\/comment\/55631",
+          "id": "55631",
+          "author": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=scott",
+            "name": "scott",
+            "key": "scott",
+            "emailAddress": "scott@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=scott&avatarId=10302",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=scott&avatarId=10302",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=scott&avatarId=10302",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=scott&avatarId=10302"
+            },
+            "displayName": "Scott Herriman",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "body": "[~nziv]\r\nHow do we handle the following cases?\r\n# The caller callback and wants to check for a different location?\r\n## They are out of region and end up at an EndCall node\r\n## They want to try to look for a car dealership close to work, not close to home? \r\n# The verify location is before\/after a variety of other nodes, probably menu nodes.\r\n## My location choice might be different, right?\r\n## Really my point is, Verify Location is NOT just tied to a bundled node.  It is an arbitrary node that can change flow control.  I am not certain that you want to limit the behavior of this node.\r\n\r\nIf we do go this route there are design and storage ramifications that will need to be considered.\r\n\r\nMy suggestion would be that as a follow-on to WEB-2481 we \"query for previous calls with the caller's telco data and not the proxy telco data.\".  That is use the callerid and the zip code selection to find the matching destination.  That will have some design considerations as well.",
+          "updateAuthor": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=scott",
+            "name": "scott",
+            "key": "scott",
+            "emailAddress": "scott@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=scott&avatarId=10302",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=scott&avatarId=10302",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=scott&avatarId=10302",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=scott&avatarId=10302"
+            },
+            "displayName": "Scott Herriman",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "created": "2016-09-29T14:59:09.923-0700",
+          "updated": "2016-09-29T14:59:09.923-0700"
+        },
+        {
+          "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/44216\/comment\/56739",
+          "id": "56739",
+          "author": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=nziv",
+            "name": "nziv",
+            "key": "nziv",
+            "emailAddress": "nziv@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=nziv&avatarId=11801",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=nziv&avatarId=11801",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=nziv&avatarId=11801",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=nziv&avatarId=11801"
+            },
+            "displayName": "Nathan Ziv",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "body": "[~scott] Updated Story based on our bug meeting yesterday. I am going to review with CX, please lmk if you have any questions. Thanks for your help.",
+          "updateAuthor": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=nziv",
+            "name": "nziv",
+            "key": "nziv",
+            "emailAddress": "nziv@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=nziv&avatarId=11801",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=nziv&avatarId=11801",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=nziv&avatarId=11801",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=nziv&avatarId=11801"
+            },
+            "displayName": "Nathan Ziv",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "created": "2016-11-01T06:28:36.786-0700",
+          "updated": "2016-11-01T06:28:36.786-0700"
+        },
+        {
+          "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/44216\/comment\/58429",
+          "id": "58429",
+          "author": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=nziv",
+            "name": "nziv",
+            "key": "nziv",
+            "emailAddress": "nziv@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=nziv&avatarId=11801",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=nziv&avatarId=11801",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=nziv&avatarId=11801",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=nziv&avatarId=11801"
+            },
+            "displayName": "Nathan Ziv",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "body": "[~lvieira@invoca.com] Updated STORY to address WEB-2481 here. Will bring into next round of grooming\/development. \r\n\r\nFYI - [~scott] Luan and team dug in with a few customers and the expected behavior is outlined in this ticket vs. the flexibility we had discussed to optionally re-prompt for location. Thanks.",
+          "updateAuthor": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=nziv",
+            "name": "nziv",
+            "key": "nziv",
+            "emailAddress": "nziv@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=nziv&avatarId=11801",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=nziv&avatarId=11801",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=nziv&avatarId=11801",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=nziv&avatarId=11801"
+            },
+            "displayName": "Nathan Ziv",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "created": "2016-12-05T17:44:51.117-0800",
+          "updated": "2016-12-05T17:44:51.117-0800"
+        },
+        {
+          "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/44216\/comment\/58507",
+          "id": "58507",
+          "author": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=scott",
+            "name": "scott",
+            "key": "scott",
+            "emailAddress": "scott@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=scott&avatarId=10302",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=scott&avatarId=10302",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=scott&avatarId=10302",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=scott&avatarId=10302"
+            },
+            "displayName": "Scott Herriman",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "body": "[~nziv]\r\nSounds good.  For my first question, #1.  Do not allow them to change their location on the the next call.\r\n\r\nThe solution may require some information that we may not currently have readily available.  I think it needs the \"Repeat Caller Fact\".\r\n\r\nAnd it isn't as simple as \"send them to the last location\".  I think it is \"assume that there verified location is the same as what they entered last time\".  The reason is cases such as a verified location, followed by a condition that checks the location, followed by a menu that asks a question followed by a bundled transfer. Basically Point #2 in my earlier comment.\r\n\r\nThat is, unless you want to create a special case for this?\r\n\r\nScott",
+          "updateAuthor": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=scott",
+            "name": "scott",
+            "key": "scott",
+            "emailAddress": "scott@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=scott&avatarId=10302",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=scott&avatarId=10302",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=scott&avatarId=10302",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=scott&avatarId=10302"
+            },
+            "displayName": "Scott Herriman",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "created": "2016-12-06T09:21:02.839-0800",
+          "updated": "2016-12-06T09:21:02.839-0800"
+        },
+        {
+          "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/44216\/comment\/58509",
+          "id": "58509",
+          "author": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=nziv",
+            "name": "nziv",
+            "key": "nziv",
+            "emailAddress": "nziv@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=nziv&avatarId=11801",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=nziv&avatarId=11801",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=nziv&avatarId=11801",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=nziv&avatarId=11801"
+            },
+            "displayName": "Nathan Ziv",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "body": "[~scott] Thank you for the feedback. The expected behavior here discussed with customers is that the repeat caller would not be re-prompted to verify location and would be transferred to the previous destination campaign vs. assume the previous verified location and potentially send them to a different destination campaign (if I understand your point correctly). \r\n\r\nIt sounds like the expected behavior would imply significant development effort, we can discuss in more detail. Thanks!",
+          "updateAuthor": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=nziv",
+            "name": "nziv",
+            "key": "nziv",
+            "emailAddress": "nziv@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=nziv&avatarId=11801",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=nziv&avatarId=11801",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=nziv&avatarId=11801",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=nziv&avatarId=11801"
+            },
+            "displayName": "Nathan Ziv",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "created": "2016-12-06T10:01:04.821-0800",
+          "updated": "2016-12-06T10:01:04.821-0800"
+        },
+        {
+          "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/44216\/comment\/59021",
+          "id": "59021",
+          "author": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=ncooper",
+            "name": "ncooper",
+            "key": "ncooper",
+            "emailAddress": "ncooper@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=ncooper&avatarId=15201",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=ncooper&avatarId=15201",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=ncooper&avatarId=15201",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=ncooper&avatarId=15201"
+            },
+            "displayName": "Nash Cooper",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "body": "Thank you [~scott] for taking the time to discuss this STORY along with the related bug WEB-2481 with me today. It sounds like the best path forward here will be for the EB Team to groom this STORY along with WEB-2481 and based on size estimates (as the STORY piece is likely fairly large) decide to either:\r\n# Work both STORY-4588 and WEB-2481 at the same time for optimal efficiency, or\r\n# Work WEB-2481 first, followed by STORY-4588, or\r\n# Work WEB-2481 and address STORY-4588 when and if resources are available\r\n\r\nIn any case, WEB-2481 will need to be addressed before or in parallel with the STORY for the updated feature to function properly with calls routed to the correct destination. These items have been added to the EB backlog for grooming, but please reach out with any questions or concerns. \r\n\r\nThanks!\r\nCC: [~nziv] [~lvieira@invoca.com] [~mhelmetag]",
+          "updateAuthor": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=ncooper",
+            "name": "ncooper",
+            "key": "ncooper",
+            "emailAddress": "ncooper@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=ncooper&avatarId=15201",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=ncooper&avatarId=15201",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=ncooper&avatarId=15201",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=ncooper&avatarId=15201"
+            },
+            "displayName": "Nash Cooper",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "created": "2016-12-15T15:09:20.326-0800",
+          "updated": "2016-12-15T15:09:20.326-0800"
+        },
+        {
+          "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/44216\/comment\/59300",
+          "id": "59300",
+          "author": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=mweaver",
+            "name": "mweaver",
+            "key": "mweaver",
+            "emailAddress": "mweaver@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=mweaver&avatarId=16000",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=mweaver&avatarId=16000",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=mweaver&avatarId=16000",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=mweaver&avatarId=16000"
+            },
+            "displayName": "Mike Weaver",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "body": "[~nziv] Documenting our discussion yesterday: We proposed an alternate solution of create a repeat caller verified zip cache. (Similar to how the repeat caller cache works now.) If a caller calls a campaign they have previously verified their zip for then location verification would be skipped and the verified location would be set to contents of the cache.",
+          "updateAuthor": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=mweaver",
+            "name": "mweaver",
+            "key": "mweaver",
+            "emailAddress": "mweaver@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=mweaver&avatarId=16000",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=mweaver&avatarId=16000",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=mweaver&avatarId=16000",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=mweaver&avatarId=16000"
+            },
+            "displayName": "Mike Weaver",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "created": "2016-12-22T09:50:30.503-0800",
+          "updated": "2016-12-22T09:50:30.503-0800"
+        },
+        {
+          "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/issue\/44216\/comment\/59305",
+          "id": "59305",
+          "author": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=nziv",
+            "name": "nziv",
+            "key": "nziv",
+            "emailAddress": "nziv@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=nziv&avatarId=11801",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=nziv&avatarId=11801",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=nziv&avatarId=11801",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=nziv&avatarId=11801"
+            },
+            "displayName": "Nathan Ziv",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "body": "[~mweaver] Correct, assuming that the bundle had the flag checked to always send callers back to previously connected with campaigns. ",
+          "updateAuthor": {
+            "self": "https:\/\/ringrevenue.atlassian.net\/rest\/api\/2\/user?username=nziv",
+            "name": "nziv",
+            "key": "nziv",
+            "emailAddress": "nziv@invoca.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?ownerId=nziv&avatarId=11801",
+              "24x24": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=small&ownerId=nziv&avatarId=11801",
+              "16x16": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=xsmall&ownerId=nziv&avatarId=11801",
+              "32x32": "https:\/\/ringrevenue.atlassian.net\/secure\/useravatar?size=medium&ownerId=nziv&avatarId=11801"
+            },
+            "displayName": "Nathan Ziv",
+            "active": true,
+            "timeZone": "America\/Los_Angeles"
+          },
+          "created": "2016-12-22T12:04:04.175-0800",
+          "updated": "2016-12-22T12:04:04.175-0800"
+        }
+      ],
+      "maxResults": 8,
+      "total": 8,
+      "startAt": 0
+    }
+  }
+}

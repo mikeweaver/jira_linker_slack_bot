@@ -1,0 +1,30 @@
+﻿AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A function that detects JIRA ticket numbers and automatically links them
+Resources:
+  JIRALinkerSlackBot:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python2.7
+      CodeUri: .
+      Description: A function that detects JIRA ticket numbers and automatically links them
+      MemorySize: 128
+      Timeout: 3
+      Role: 'arn:aws:iam::389482753914:role/service-role/JIRALinkerSlackBot'
+      Environment:
+        Variables:
+          ENCRYPTED_SLACK_CLIENT_SECRET: >-
+            REPLACEME
+          JIRA_PROJECT_KEYS: STORY|BUG
+          JIRA_SITE_URL: yourdomain.atlassian.net
+          ENCRYPTED_SLACK_CLIENT_ID: >-
+            REPLACEME
+          ENCRYPTED_JIRA_PASSWORD: >-
+            REPLACEME
+          ENCRYPTED_SLACK_OAUTH_ACCESS_TOKEN: >-
+            REPLACEME
+          ENCRYPTED_JIRA_USER_NAME: >-
+            REPLACEME
+          ENCRYPTED_SLACK_VERIFICATION_TOKEN: >-
+            REPLACEME

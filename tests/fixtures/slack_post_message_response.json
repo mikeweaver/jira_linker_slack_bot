@@ -1,0 +1,22 @@
+{
+  "message": {
+    "username": "JIRA Linker",
+    "attachments": [
+      {
+        "color": "7CD197",
+        "text": "This is the text you posted",
+        "fallback": "NO FALLBACK DEFINED",
+        "id": 1,
+        "mrkdwn_in": ["text"]
+      }
+    ],
+    "text": "",
+    "ts": "1482991025.000010",
+    "subtype": "bot_message",
+    "type": "message",
+    "bot_id": "B3JM3819A"
+  },
+  "ok": true,
+  "ts": "1482991025.000010",
+  "channel": "C02B5TYSJ"
+}
