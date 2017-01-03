@@ -99,7 +99,8 @@ def attachment_for_jira_issue(key):
         return {
             'text': '<https://{0}/browse/{1}|{1}> - `{2}`\n{3}'.format(JIRA_SITE_URL, key, issue['fields']['status']['name'], issue['fields']['summary']),
             'color': '#7CD197',
-            'mrkdwn_in': ['text']
+            'mrkdwn_in': ['text'],
+            'fallback': 'https://{0}/browse/{1}'.format(JIRA_SITE_URL, key)
         }
     else:
         return None
