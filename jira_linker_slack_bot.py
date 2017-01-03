@@ -85,7 +85,7 @@ def get_jira_keys(text):
         '''(?:^|\s|_|-|"|'|,|>|/)((?:{0})[- _]\d+)'''.format('|'.join(JIRA_PROJECT_KEYS)),
         re.IGNORECASE
     ).findall(text)
-    return [key.upper() for key in keys]
+    return set([key.upper() for key in keys])
     
 def handle_verification_event(event):
     response_body = {
