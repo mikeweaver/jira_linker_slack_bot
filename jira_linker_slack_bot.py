@@ -82,7 +82,7 @@ def get_jira_issue(key):
 
 def get_jira_keys(text):
     keys = re.compile(
-        '''(?:^|\s|_|-|"|'|,|>)((?:{0})[- _]\d+)'''.format('|'.join(JIRA_PROJECT_KEYS)),
+        '''(?:^|\s|_|-|"|'|,|>|/)((?:{0})[- _]\d+)'''.format('|'.join(JIRA_PROJECT_KEYS)),
         re.IGNORECASE
     ).findall(text)
     return [key.upper() for key in keys]
