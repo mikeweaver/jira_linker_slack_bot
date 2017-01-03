@@ -185,7 +185,7 @@ def handle_oauth(request):
     return respond(body=response_body, content_type='text/html')
 
 def lambda_handler(request, context):
-    print(json.dumps(request))
+    #print(json.dumps(request))
     path = (request.get('pathParameters') or {}).get('path')
     if path == 'event':
         return handle_event(request)
