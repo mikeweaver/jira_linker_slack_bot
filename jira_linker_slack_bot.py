@@ -23,6 +23,7 @@ SLACK_VERIFICATION_TOKEN = kms.decrypt(CiphertextBlob=base64.b64decode(os.enviro
 SLACK_CLIENT_ID = kms.decrypt(CiphertextBlob=base64.b64decode(os.environ['ENCRYPTED_SLACK_CLIENT_ID']))['Plaintext']
 SLACK_CLIENT_SECRET = kms.decrypt(CiphertextBlob=base64.b64decode(os.environ['ENCRYPTED_SLACK_CLIENT_SECRET']))['Plaintext']
 SLACK_OAUTH_ACCESS_TOKEN = kms.decrypt(CiphertextBlob=base64.b64decode(os.environ['ENCRYPTED_SLACK_OAUTH_ACCESS_TOKEN']))['Plaintext']
+SILENCE_FOR_N_MESSAGES = int(os.environ.get('SILENCE_FOR_N_MESSAGES', 30))
 
 OAUTH_URL='https://{0}/prod/oauth'
 SLACK_API_URL = 'https://slack.com/api/{0}'
@@ -92,7 +93,44 @@ def handle_verification_event(event):
         "challenge": event['challenge']
     }
     return respond_json(body=response_body)
-    
+
+def get_last_n_messages_from_channel(channel, timestamp, count):
+    if channel[:1] == 'D':
+        method = 'im.history'
+    elif channel[:1] == 'G':
+        method = 'groups.history'
+    else:
+        method = 'channels.history'
+
+    api_request_body = {
+        'token': SLACK_OAUTH_ACCESS_TOKEN,
+        'channel': channel,
+        'count': count,
+        'latest': timestamp
+    }
+
+    success, api_response_body = post_slack_api_request(method, api_request_body)
+    if success:
+        return [message['text'] for message in api_response_body['messages'] if message.get('text')]
+    else:
+        print(api_response_body)
+        print('Failed to get messages from the channel')
+        return []
+
+def exclude_keys_mentioned_in_the_last_n_messages(channel_id, timestamp, count, keys):
+    remaining_keys = set(keys)
+    if count <= 0:
+        return remaining_keys
+
+    for message_text in get_last_n_messages_from_channel(channel_id, timestamp, count):
+        remaining_keys -= get_jira_keys(message_text)
+        if len(remaining_keys) == 0:
+            break
+    if keys != remaining_keys:
+        print('Removed {0} because they were mentioned in the previous {1} messages'.format(','.join(keys - remaining_keys), count))
+
+    return remaining_keys
+
 def attachment_for_jira_issue(key):
     issue = get_jira_issue(key)
     if issue:
@@ -124,10 +162,11 @@ def handle_message_event(event):
     keys = get_jira_keys(event['text'])
     if len(keys) > 0:
         print('Message contains JIRA Keys {0}'.format(','.join(keys)))
-        
-        attachments = attachments_for_jira_issues(keys)
-        if len(attachments) > 0:
-            post_slack_message_with_attachments(event['channel'], attachments)
+        keys = exclude_keys_mentioned_in_the_last_n_messages(event['channel'], event['ts'], SILENCE_FOR_N_MESSAGES, keys)
+        if len(keys) > 0:
+            attachments = attachments_for_jira_issues(keys)
+            if len(attachments) > 0:
+                post_slack_message_with_attachments(event['channel'], attachments)
     else:
         print('Message does not contain a JIRA key, ignoring')
 
