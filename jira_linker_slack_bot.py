@@ -34,7 +34,7 @@ logger.setLevel(logging.INFO)
 
 def respond_json(body=None, status_code='200'):
     return respond(body=json.dumps(body), status_code=status_code, content_type='application/json')
-    
+
 def respond(body=None, status_code='200', content_type=None):
     response = {
         'statusCode': status_code,
@@ -43,12 +43,12 @@ def respond(body=None, status_code='200', content_type=None):
     }
     if body:
         response['body'] = body
-        
+
     if content_type:
         response['headers']['Content-Type'] = content_type
-    
+
     return response
-    
+
 def post_slack_api_request(method, body):
     data = urllib.urlencode(body)
     print(data)
@@ -57,14 +57,14 @@ def post_slack_api_request(method, body):
     response = urllib2.urlopen(request)
     body = json.loads(response.read())
     return body['ok'], body
-    
+
 def post_slack_message_with_attachments(channel, attachments):
     api_request_body = {
         'token': SLACK_OAUTH_ACCESS_TOKEN,
         'channel': channel,
         'attachments': json.dumps(attachments)
     }
-    
+
     print(json.dumps(api_request_body))
     _, api_response_body = post_slack_api_request('chat.postMessage', api_request_body)
     print(api_response_body)
@@ -86,7 +86,7 @@ def get_jira_keys(text):
         re.IGNORECASE
     ).findall(text)
     return set([key.upper() for key in keys])
-    
+
 def handle_verification_event(event):
     response_body = {
         "challenge": event['challenge']
@@ -104,7 +104,7 @@ def attachment_for_jira_issue(key):
         }
     else:
         return None
-        
+
 def attachments_for_jira_issues(keys):
     attachments = []
     for key in keys:
@@ -113,9 +113,9 @@ def attachments_for_jira_issues(keys):
             attachments.append(attachment)
         else:
             print('No JIRA issue found for key {0}'.format(key))
-            
+
     return attachments
-    
+
 def handle_message_event(event):
     if event.get('subtype') == 'message_changed':
         print('Ignoring changed message to avoid re-posting JIRA issue details')
@@ -130,22 +130,22 @@ def handle_message_event(event):
             post_slack_message_with_attachments(event['channel'], attachments)
     else:
         print('Message does not contain a JIRA key, ignoring')
-    
+
     return respond(status_code='204')
-    
+
 def handle_event(request):
     event = json.loads(request.get('body'))
     if event['token'] != SLACK_VERIFICATION_TOKEN:
         return respond(status_code='403')
     type = event['type']
-    
+
     if type == 'event_callback' and event['event']['type'] == 'message':
         return handle_message_event(event['event'])
     elif type == 'url_verification':
         return handle_verification_event(event)
     else:
         return respond_json(status_code='400')
-        
+
 def handle_install(request):
     host = request['headers']['Host']
     response_body = '''
@@ -156,7 +156,7 @@ def handle_install(request):
             </a>
         </body></html>'''.format(SLACK_CLIENT_ID, OAUTH_URL.format(host))
     return respond(body=response_body, content_type='text/html')
-    
+
 def handle_oauth(request):
     host = request['headers']['Host']
 
@@ -166,7 +166,7 @@ def handle_oauth(request):
         'code': request['queryStringParameters']['code'],
         'redirect_uri': OAUTH_URL.format(host)
     }
-    
+
     success, api_response_body = post_slack_api_request('oauth.access', api_request_body)
     if success:
         response_body = '''
@@ -181,7 +181,7 @@ def handle_oauth(request):
                 <h4>Failed to Get Access Token:</h4>
                 <p>{0}</p>
             </body></html>'''.format(api_response_body['error'])
-        
+
     return respond(body=response_body, content_type='text/html')
 
 def lambda_handler(request, context):
