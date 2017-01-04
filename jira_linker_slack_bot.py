@@ -165,8 +165,8 @@ def attachments_for_jira_issues(keys):
     return attachments
 
 def handle_message_event(event):
-    if event.get('subtype') == 'message_changed':
-        print('Ignoring changed message to avoid re-posting JIRA issue details')
+    if event.get('subtype') is not None:
+        print('Ignoring non-standard message type {0}'.format(event.get('subtype')))
         return respond(status_code='204')
 
     keys = get_jira_keys_excluding_code_snippets(event['text'])
