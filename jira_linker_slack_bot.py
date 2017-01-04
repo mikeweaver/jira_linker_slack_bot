@@ -81,12 +81,22 @@ def get_jira_issue(key):
     except urllib2.HTTPError as e:
         return None
 
+def remove_code_snippets(text):
+    # slack represents code snippets with ```
+    return re.compile('```((?!```).)*```', re.MULTILINE|re.DOTALL).sub('', text)
+
+def upper_case_and_remove_duplicates(values):
+    return set([value.upper() for value in values])
+
+def get_jira_keys_excluding_code_snippets(text):
+    return get_jira_keys(remove_code_snippets(text))
+
 def get_jira_keys(text):
     keys = re.compile(
         '''(?:^|\s|_|-|"|'|,|>|/)((?:{0})[- _]\d+)'''.format('|'.join(JIRA_PROJECT_KEYS)),
         re.IGNORECASE
     ).findall(text)
-    return set([key.upper() for key in keys])
+    return upper_case_and_remove_duplicates(keys)
 
 def handle_verification_event(event):
     response_body = {
@@ -123,7 +133,7 @@ def exclude_keys_mentioned_in_the_last_n_messages(channel_id, timestamp, count, 
         return remaining_keys
 
     for message_text in get_last_n_messages_from_channel(channel_id, timestamp, count):
-        remaining_keys -= get_jira_keys(message_text)
+        remaining_keys -= get_jira_keys_excluding_code_snippets(message_text)
         if len(remaining_keys) == 0:
             break
     if keys != remaining_keys:
@@ -159,7 +169,7 @@ def handle_message_event(event):
         print('Ignoring changed message to avoid re-posting JIRA issue details')
         return respond(status_code='204')
 
-    keys = get_jira_keys(event['text'])
+    keys = get_jira_keys_excluding_code_snippets(event['text'])
     if len(keys) > 0:
         print('Message contains JIRA Keys {0}'.format(','.join(keys)))
         keys = exclude_keys_mentioned_in_the_last_n_messages(event['channel'], event['ts'], SILENCE_FOR_N_MESSAGES, keys)
