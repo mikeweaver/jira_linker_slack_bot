@@ -189,7 +189,13 @@ def handle_event(request):
     type = event['type']
 
     if type == 'event_callback' and event['event']['type'] == 'message':
-        return handle_message_event(event['event'])
+        # ignore retry messages, we likely took longer than 3 seconds to respond
+        # and are still processing the first message
+        retry_num = request['headers'].get('X-Slack-Retry-Num')
+        if retry_num and int(retry_num) > 0:
+            return respond()
+        else:
+            return handle_message_event(event['event'])
     elif type == 'url_verification':
         return handle_verification_event(event)
     else:
