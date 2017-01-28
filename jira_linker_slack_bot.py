@@ -59,12 +59,14 @@ def post_slack_api_request(method, body):
     body = json.loads(response.read())
     return body['ok'], body
 
-def post_slack_message_with_attachments(channel, attachments):
+def post_slack_message_with_attachments(channel, thread_ts, attachments):
     api_request_body = {
         'token': SLACK_OAUTH_ACCESS_TOKEN,
         'channel': channel,
         'attachments': json.dumps(attachments)
     }
+    if thread_ts:
+        api_request_body['thread_ts'] = thread_ts
 
     print(json.dumps(api_request_body))
     _, api_response_body = post_slack_api_request('chat.postMessage', api_request_body)
@@ -176,7 +178,7 @@ def handle_message_event(event):
         if len(keys) > 0:
             attachments = attachments_for_jira_issues(keys)
             if len(attachments) > 0:
-                post_slack_message_with_attachments(event['channel'], attachments)
+                post_slack_message_with_attachments(event['channel'], event.get('thread_ts'), attachments)
     else:
         print('Message does not contain a JIRA key, ignoring')
 
