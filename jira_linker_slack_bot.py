@@ -18,7 +18,7 @@ kms = boto3.client('kms')
 JIRA_PROJECT_KEYS = os.environ['JIRA_PROJECT_KEYS'].split('|')
 JIRA_SITE_URL = os.environ['JIRA_SITE_URL']
 JIRA_USER_NAME =kms.decrypt(CiphertextBlob=base64.b64decode(os.environ['ENCRYPTED_JIRA_USER_NAME']))['Plaintext']
-JIRA_PASSWORD = kms.decrypt(CiphertextBlob=base64.b64decode(os.environ['ENCRYPTED_JIRA_PASSWORD']))['Plaintext']
+JIRA_API_TOKEN = kms.decrypt(CiphertextBlob=base64.b64decode(os.environ['ENCRYPTED_JIRA_API_TOKEN']))['Plaintext']
 SLACK_VERIFICATION_TOKEN = kms.decrypt(CiphertextBlob=base64.b64decode(os.environ['ENCRYPTED_SLACK_VERIFICATION_TOKEN']))['Plaintext']
 SLACK_CLIENT_ID = kms.decrypt(CiphertextBlob=base64.b64decode(os.environ['ENCRYPTED_SLACK_CLIENT_ID']))['Plaintext']
 SLACK_CLIENT_SECRET = kms.decrypt(CiphertextBlob=base64.b64decode(os.environ['ENCRYPTED_SLACK_CLIENT_SECRET']))['Plaintext']
@@ -75,7 +75,7 @@ def post_slack_message_with_attachments(channel, thread_ts, attachments):
 def get_jira_issue(key):
     request = urllib2.Request(JIRA_ISSUE_API_URL.format(JIRA_SITE_URL, key))
     request.add_header('Content-Type', 'application/json')
-    echoded_auth_header = base64.encodestring('{0}:{1}'.format(JIRA_USER_NAME, JIRA_PASSWORD))[:-1]
+    echoded_auth_header = base64.b64encode('{0}:{1}'.format(JIRA_USER_NAME, JIRA_API_TOKEN))
     request.add_header('Authorization', 'Basic {0}'.format(echoded_auth_header))
     try:
         response = urllib2.urlopen(request)

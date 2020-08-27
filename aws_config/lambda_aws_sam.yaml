@@ -20,7 +20,7 @@ Resources:
           JIRA_SITE_URL: yourdomain.atlassian.net
           ENCRYPTED_SLACK_CLIENT_ID: >-
             REPLACEME
-          ENCRYPTED_JIRA_PASSWORD: >-
+          ENCRYPTED_JIRA_API_TOKEN: >-
             REPLACEME
           ENCRYPTED_SLACK_OAUTH_ACCESS_TOKEN: >-
             REPLACEME
