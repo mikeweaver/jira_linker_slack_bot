@@ -107,21 +107,14 @@ def handle_verification_event(event):
     return respond_json(body=response_body)
 
 def get_last_n_messages_from_channel(channel, timestamp, count):
-    if channel[:1] == 'D':
-        method = 'im.history'
-    elif channel[:1] == 'G':
-        method = 'groups.history'
-    else:
-        method = 'channels.history'
-
     api_request_body = {
         'token': SLACK_OAUTH_ACCESS_TOKEN,
         'channel': channel,
-        'count': count,
+        'limit': count,
         'latest': timestamp
     }
 
-    success, api_response_body = post_slack_api_request(method, api_request_body)
+    success, api_response_body = post_slack_api_request('conversations.history', api_request_body)
     if success:
         return [message['text'] for message in api_response_body['messages'] if message.get('text')]
     else:
