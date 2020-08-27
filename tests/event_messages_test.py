@@ -15,9 +15,10 @@ class TestEventMessages(unittest.TestCase):
         self.assertEqual(response['statusCode'], '204')
 
     def test_event_message(self):
-        jira_issue_response = self.get_fixture('jira_get_issue_response')
-        slack_post_message_response = self.get_fixture('slack_post_message_response')
-        flexmock(urllib2).should_receive('urlopen').and_return(StringIO(json.dumps(jira_issue_response))).and_return(StringIO(json.dumps(slack_post_message_response)))
+        slack_get_history_response = StringIO(json.dumps(self.get_fixture('slack_get_history_response')))
+        jira_issue_response = StringIO(json.dumps(self.get_fixture('jira_get_issue_response')))
+        slack_post_message_response = StringIO(json.dumps(self.get_fixture('slack_post_message_response')))
+        flexmock(urllib2).should_receive('urlopen').and_return(slack_get_history_response).and_return(jira_issue_response).and_return(slack_post_message_response)
 
         request = self.get_fixture('slack_event_message_request')
         response = lambda_handler(request, None)
